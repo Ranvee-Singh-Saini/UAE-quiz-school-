@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UAE Quiz</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        iframe {
+            border: none;
+            margin-top: 20px;
+        }
+        .he {
+          font-family: cursive;
+        }
+
+        /* Styling for feedback form */
+        .feedback-form {
+            margin-top: 30px;
+            width: 100%;
+            max-width: 600px;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .feedback-form input, .feedback-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .feedback-form button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .feedback-form button:hover {
+            background-color: #45a049;
+        }
+
+        .response-message {
+            margin-top: 10px;
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1><u>UAE Quiz</u></h1>
+    
+    <!-- Embed Scratch Project -->
+    <iframe src="https://scratch.mit.edu/projects/1153060993/embed" 
+    allowtransparency="true" 
+    width="1123" 
+    height="742" 
+    frameborder="1" 
+    scrolling="no" 
+    allowfullscreen></iframe>
+
+    <p class="he">
+      <b>By-Ranveer Singh Saini</b><br><br>
+     <u><b>United Arab Emirates Knowledge Quiz</b></u><br>
+        This quiz comprises ten thoughtfully selected questions designed to assess and enhance your understanding of the United Arab Emirates. Covering a range of topics including geography, history, culture, and national achievements, it provides an engaging and informative experience. Whether you are a student, educator, or simply an enthusiast of the UAE, this quiz offers a valuable opportunity to test your knowledge in a structured format. <br><br>
+        <u><b>اختبار المعرفة عن دولة الإمارات العربية المتحدة</b></u><br>
+        يتكون هذا الاختبار من عشرة أسئلة مختارة بعناية لقياس وتعزيز معرفتك بدولة الإمارات العربية المتحدة. يغطي الاختبار مجموعة متنوعة من المواضيع مثل الجغرافيا، والتاريخ، والثقافة، والإنجازات الوطنية، ليقدم تجربة تعليمية ممتعة ومفيدة. سواء كنت طالبًا أو معلّمًا أو من المهتمين بشؤون الإمارات، فإن هذا الاختبار يوفّر لك فرصة قيّمة لاختبار معلوماتك بطريقة منظمة.
+    </p>
+
+    <!-- Feedback Form -->
+    <div class="feedback-form">
+        <h3>Feedback Form</h3>
+        <form id="feedbackForm">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="feedback">Your Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="4" required></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+        <div id="responseMessage" class="response-message"></div>
+    </div>
+
+    <script>
+        // Handle feedback form submission with JavaScript
+        document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Get form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const feedback = document.getElementById('feedback').value;
+
+            // Simulate sending the feedback data (No backend is used, so it's just a simple message)
+            // Removed console.log to avoid printing sensitive information
+
+            // Display a confirmation message
+            const responseMessage = document.getElementById('responseMessage');
+            responseMessage.textContent = "Thank you for your feedback, " + name + "!";
+
+            // Clear the form fields
+            document.getElementById('feedbackForm').reset();
+        });
+    </script>
+</body>
+</html>
+
